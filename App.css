@@ -1,0 +1,506 @@
+/* General Styles */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: burlywood;
+}
+/* Profile Container */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+.ans img:hover {
+  transform: scale(1.1);
+}
+/* Profile Image (Circular) */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid rgb(136, 80, 6);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Title */
+
+/* Profile Description */
+.profile-description {
+  width: 60%;
+  margin-top: 17px;
+  background: rgba(136, 80, 6, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgb(80, 50, 20);
+}
+
+/* Styling for text inside */
+.profile-description strong {
+  color: rgb(136, 80, 6);
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.profile-description:hover {
+  background: rgba(136, 80, 6, 0.2);
+  transform: scale(1.02);
+  transition: 0.3s ease-in-out;
+}
+
+/* Main Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Navbar */
+.nav_bar_wrapper {
+  background-color: rgb(136, 80, 6);
+  margin-left: auto; /* Push navigation links to the right */
+  display: flex;
+  gap: 30px; /* Adds spacing between links */
+}
+
+.nav_bar_wrapper a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Ensure content fills available space without affecting footer */
+.content {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  flex-grow: 1; /* Takes up remaining space without pushing the footer */
+  position: relative; /* Ensures child elements position correctly */
+  padding-bottom: 60px; /* Prevents overlap with footer */
+  margin-left: 40px;
+}
+
+/* Center text properly */
+.text-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px; /* Adds space between elements */
+}
+.center-content {
+  margin-left: 480px;
+}
+/* Image Positioned on Left Center */
+.ans {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px !important;
+  height: 450px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 40px;
+  border: 5px solid rgb(136, 80, 6);
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.ans img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Keep Footer Fixed */
+.footer-card {
+  background-color: rgb(136, 80, 6) !important;
+  color: white !important;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border: none !important;
+}
+
+/* Footer Icons */
+.footer-icons {
+  display: flex;
+  gap: 18px; /* Adjust spacing as needed */
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.footer-icons :hover {
+  color: burlywood !important;
+}
+
+/* Button Styles */
+.btn {
+  background-color: rgb(136, 80, 6) !important;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  color: white !important;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 3px 3px rgb(94, 57, 10);
+  border-color: rgb(140, 92, 8) !important ;
+}
+
+.btn:hover {
+  background-color: rgb(94, 57, 10) !important;
+}
+
+/* Animations */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main Skills Container */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Title Styling */
+.skills-title {
+  font-size: 60px;
+  color: rgb(136, 80, 6);
+  text-shadow: 2px 2px rgb(72, 3, 3);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 900px;
+}
+
+/* Individual Skill Box */
+.skill-box {
+  width: 150px;
+  height: 150px;
+  background: rgb(136, 80, 6);
+  color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+  background: rgb(160, 90, 10);
+}
+
+/* Icon Styling */
+.skill-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+/* Individual Icon Colors */
+.html {
+  color: #e44d26;
+} /* HTML */
+.css {
+  color: #1572b6;
+} /* CSS */
+.js {
+  color: #f7df1e;
+} /* JavaScript */
+.bootstrap {
+  color: #563d7c;
+} /* Bootstrap */
+.tailwind {
+  color: #38b2ac;
+} /* Tailwind */
+.react {
+  color: #61dafb;
+} /* ReactJS */
+.sql {
+  color: #f29111;
+} /* SQL */
+.java {
+  color: #007396;
+} /* Java */
+
+/* Full Page Styling */
+.register-page {
+  /* Soft background */
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: brown;
+  padding: 20px;
+}
+
+/* Login Page Title */
+
+/* Login Card Styling */
+.login-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid brown;
+  background-color: rgb(136, 80, 6);
+}
+
+/* Input Field Styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid rgb(136, 80, 6);
+  padding: 10px;
+}
+
+/* Button Styling */
+.login-btn {
+  background-color: rgb(136, 80, 6);
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  color: rgb(136, 80, 6);
+}
+
+.login-btn:hover {
+  background-color: brown;
+}
+
+/* Ensuring form is centered without affecting footer */
+@media (max-width: 500px) {
+  .login-card {
+    width: 100%;
+  }
+}
+/* Main container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 260px;
+  padding: 1px;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Left and Right sections */
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  flex: 1; /* Equal flexibility */
+}
+
+/* Left Side - 2 Boxes per Row (2x2 Grid) */
+.left .boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-left: -90px;
+  margin-top: -50px;
+}
+
+/* Right Side - One Box Per Row (Single Column) */
+.right .boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: -50px;
+  margin-left: -150px;
+}
+
+/* Box Styling */
+.box {
+  background-color: rgb(136, 80, 6);
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s;
+
+  /* Initial fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Add delay for each box */
+.box:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.box:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #d48806;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-title {
+  color: rgb(136, 80, 6);
+  font-size: 54px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Box Styling */
+.box {
+  background-color: rgb(136, 80, 6);
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background-color 0.3s;
+}
+
+/* Title inside the box */
+.box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Text inside the box */
+.box p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* Hover effect */
+.box:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.3);
+  background-color: #d48806;
+}
+/* Navbar Styles */
+.custom-navbar {
+  background-color: rgb(136, 80, 6);
+  padding: 10px 20px;
+}
+
+.brand-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item:hover {
+  color: burlywood;
+}
+
+/* Mobile Navigation */
+@media (max-width: 991px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-item {
+    padding: 8px;
+    text-align: center;
+  }
+}
